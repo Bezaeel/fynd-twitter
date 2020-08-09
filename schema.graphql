@@ -1,0 +1,28 @@
+schema {
+    query: Query
+}
+
+type Query {
+    ping: String!
+    posts: [Post!]!
+
+}
+
+type Post{
+    id: ID!
+    user_id: ID!
+    message: String!
+    comments: [Post]
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    posts: [Post]
+    followers: [Follower]
+}
+
+type Follower{
+    user_id: ID!
+}
