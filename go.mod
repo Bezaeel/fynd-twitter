@@ -2,4 +2,8 @@ module github.com/bezaeel/fynd-twitter
 
 go 1.14
 
-require github.com/graph-gophers/graphql-go v0.0.0-20200622220639-c1d9693c95a6
+require (
+	github.com/graphql-go/graphql v0.7.9
+	github.com/graphql-go/graphql-go-handler v0.2.3
+	github.com/graphql-go/handler v0.2.3 // indirect
+)

@@ -1,62 +1,58 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	graphql "github.com/graph-gophers/graphql-go"
-	"github.com/graph-gophers/graphql-go/relay"
-	"io/ioutil"
-	"log"
+	"github.com/bezaeel/fynd-twitter/resolvers"
+	"github.com/graphql-go/graphql"
 	"net/http"
-	models "github.com/bezaeel/fynd-twitter/models"
 )
 
-
-
-var opts =  []graphql.SchemaOpt{graphql.UseFieldResolvers()}
-var posts = []models.Post{
-	{
-		Id: "0",
-		Message: "Ask Talabi..",
-	},
-}
-
-
-type RootResolver struct {
-
-}
-
-
-
-func (r *RootResolver) Ping() (string, error) {
-	return "Ask Talabi..", nil
-}
-
-func (r *RootResolver) Posts() ([]models.Post, error){
-	return posts, nil
-}
-
-
-func parseSchema(path string, resolver interface{}) *graphql.Schema {
-	bstr, err := ioutil.ReadFile(path)
-	if err != nil {
-		panic(err)
-	}
-
-	schemaString := string(bstr)
-	parsedSchema, err := graphql.ParseSchema(schemaString, resolver, opts...,)
-
-	if err != nil {
-		panic(err)
-	}
-	return parsedSchema
-}
-
-
-func main(){
-	http.Handle("/graphql", &relay.Handler{
-		Schema: parseSchema("./schema.graphql", &RootResolver{}),
+var queryType = graphql.NewObject(
+	graphql.ObjectConfig{
+		Name: "Query",
+		Fields: graphql.Fields{
+			/* Get (read) single post by id
+			   http://localhost:8000/post?query={post(id:1){message,comment}}
+			*/
+			"post": resolvers.GetPost,
+			/* Get (read) post list
+			   http://localhost:8000/post?query={list{id,message,comment}}
+			*/
+			"posts": resolvers.ListPosts,
+			"user":  resolvers.GetUser,
+			"users": resolvers.ListUsers,
+		},
 	})
 
-	fmt.Println("serving on 8000")
-	log.Fatal(http.ListenAndServe(":8000", nil))
+var schema, _ = graphql.NewSchema(
+	graphql.SchemaConfig{
+		Query: queryType,
+		//Mutation: mutationType,
+	},
+)
+
+func executeQuery(query string, schema graphql.Schema) *graphql.Result {
+	result := graphql.Do(graphql.Params{
+		Schema:        schema,
+		RequestString: query,
+	})
+	if len(result.Errors) > 0 {
+		fmt.Printf("errors: %v", result.Errors)
+	}
+	return result
+}
+
+func main() {
+	http.HandleFunc("/post", func(w http.ResponseWriter, r *http.Request) {
+		result := executeQuery(r.URL.Query().Get("query"), schema)
+		json.NewEncoder(w).Encode(result)
+	})
+	http.HandleFunc("/user", func(w http.ResponseWriter, r *http.Request) {
+		result := executeQuery(r.URL.Query().Get("query"), schema)
+		json.NewEncoder(w).Encode(result)
+	})
+
+	fmt.Println("Server is running on port 8000")
+	http.ListenAndServe(":8000", nil)
 }
