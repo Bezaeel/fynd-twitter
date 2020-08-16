@@ -1,10 +1,14 @@
 package repositories
 
-import "github.com/bezaeel/fynd-twitter/models"
+import (
+	"errors"
+	"github.com/bezaeel/fynd-twitter/models"
+)
 
 var Posts = []models.Post{
 	{
 		ID:      1,
+		UserId:  1,
 		Message: "First Post",
 		Comment: []models.Comment{
 			{
@@ -35,12 +39,29 @@ func GetAllPosts() []models.Post {
 
 func GetPost(id int) (models.Post, error) {
 	var post models.Post
-	// Find product
-	for _, product := range Posts {
-		if int(product.ID) == id {
-			post = product
+	for _, postItem := range Posts {
+		if int(postItem.ID) == id {
+			post = postItem
 		}
 	}
-
 	return post, nil
+}
+
+func AddPost(userId int, message string) (models.Post, error) {
+	//user must exist before posting
+	for _, user := range users {
+		if user.Id != userId {
+			return models.Post{}, errors.New("invalid userId")
+		}
+		break
+	}
+	post := models.Post{
+		ID:      2,
+		UserId:  userId,
+		Message: message,
+		Comment: nil,
+	}
+	var Posts = append(Posts, post)
+	//log.Println(Posts)
+	return Posts[2], nil
 }

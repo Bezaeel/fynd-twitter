@@ -9,6 +9,9 @@ var CommentType = graphql.NewObject(
 			"id": &graphql.Field{
 				Type: graphql.Int,
 			},
+			"user-id": &graphql.Field{
+				Type: graphql.Int,
+			},
 			"message": &graphql.Field{
 				Type: graphql.String,
 			},
@@ -28,6 +31,20 @@ var PostType = graphql.NewObject(
 			},
 			"comment": &graphql.Field{
 				Type: graphql.NewList(CommentType),
+			},
+		},
+	},
+)
+
+var AddPostType = graphql.NewObject(
+	graphql.ObjectConfig{
+		Name: "Add Post",
+		Fields: graphql.Fields{
+			"userId": &graphql.Field{
+				Type: graphql.Int,
+			},
+			"message": &graphql.Field{
+				Type: graphql.String,
 			},
 		},
 	},
@@ -58,6 +75,20 @@ var FollowerType = graphql.NewObject(
 		Name: "Follower",
 		Fields: graphql.Fields{
 			"UserId": &graphql.Field{
+				Type: graphql.Int,
+			},
+		},
+	},
+)
+
+var AddFollowerType = graphql.NewObject(
+	graphql.ObjectConfig{
+		Name: "AddFollower",
+		Fields: graphql.Fields{
+			"UserId": &graphql.Field{
+				Type: graphql.Int,
+			},
+			"FollowerId": &graphql.Field{
 				Type: graphql.Int,
 			},
 		},

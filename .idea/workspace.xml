@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd1a7554-3ac8-4b8a-84c2-c3b664972fb3" name="Default Changelist" comment="" />
+    <list default="true" id="dd1a7554-3ac8-4b8a-84c2-c3b664972fb3" name="Default Changelist" comment="Implementation of the queries, mutations, resolvers and repositories&#10;Changed graphql library">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Post.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/Post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/schema.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/schema.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/PostRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/PostRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/UserRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/UserRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resolvers/PostResolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/resolvers/PostResolver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resolvers/UserResolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/resolvers/UserResolver.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,20 +23,32 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Bezaeel &lt;talabi.rotimi@hotmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1fppWGD0VK1galC7aKXq3HekAsk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -37,17 +61,121 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoAppEngineRunConfiguration" factoryName="Go App Engine">
+      <module name="fynd-twitter" />
+      <working_directory value="$PROJECT_DIR$" />
+      <HOST value="localhost" />
+      <PORT value="8000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/bezaeel/fynd-twitter" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="fynd-twitter" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/bezaeel/fynd-twitter" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/bezaeel/fynd-twitter" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementation of the queries, resolvers and repositories&#10;Changed graphql library" />
+    <MESSAGE value="Implementation of the queries, mutations, resolvers and repositories&#10;Changed graphql library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation of the queries, mutations, resolvers and repositories&#10;Changed graphql library" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="396" y="169" key="#Notifications" timestamp="1597616321447">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="396" y="169" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1597616321447" />
+    <state x="2334" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597621271410">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2334" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597621271410" />
     <state x="2622" y="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596926837290">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2622" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1596926837290" />
+    <state x="2183" y="231" key="#com.intellij.ide.util.MemberChooser" timestamp="1596943052188">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2183" y="231" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1596943052188" />
+    <state x="2441" y="93" key="CommitChangelistDialog2" timestamp="1597622234326">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2441" y="93" key="CommitChangelistDialog2/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597622234326" />
+    <state width="728" height="466" key="DebuggerActiveHint" timestamp="1597621904358">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="728" height="466" key="DebuggerActiveHint/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597621904358" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1597622133225">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597622133225" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1597622133225">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597622133225" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1597622133225">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597622133225" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1597622133225">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597622133225" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1597621927825">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597621927825" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1597621927824">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597621927824" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1597621927824">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597621927824" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1597621927824">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597621927824" />
+    <state x="93" y="93" width="1095" height="504" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596953402499">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="93" y="93" width="1095" height="504" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.689@0.0.1280.689" timestamp="1596953402499" />
+    <state x="2723" y="285" key="refactoring.ChangeSignatureDialog" timestamp="1597021281795">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2723" y="285" key="refactoring.ChangeSignatureDialog/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597021281795" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/repositories/PostRepository.go</url>
+          <line>57</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/repositories/PostRepository.go</url>
+          <line>63</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

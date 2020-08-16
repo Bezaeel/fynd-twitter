@@ -31,27 +31,27 @@ var GetPost = &graphql.Field{
 	},
 }
 
-//
-//import "github.com/bezaeel/fynd-twitter/models"
-//
-//type PostResolver struct {
-//	RootResolver
-//}
-//
-//type RootResolver struct {
-//
-//}
-//var Posts = &[]models.Post{
-//	{
-//		Id: "id-0",
-//		UserId: "2",
-//		Message: "Ask Talabi..",
-//	},
-//}
-//
-//
-//func (r *RootResolver) Posts() (*[]models.Post, error){
-//	return Posts, nil
-//}
-//
-//func
+var AddPost = &graphql.Field{
+	Type:        models.AddPostType,
+	Description: "Add post",
+	Args: graphql.FieldConfigArgument{
+		"userId": &graphql.ArgumentConfig{
+			Type: graphql.Int,
+		},
+		"message": &graphql.ArgumentConfig{
+			Type: graphql.String,
+		},
+	},
+	Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+		userId, ok := p.Args["userId"].(int)
+		mesage, messageOk := p.Args["message"].(string)
+
+		if !ok {
+			return nil, nil
+		}
+		if !messageOk {
+			return nil, nil
+		}
+		return Repo.AddPost(userId, mesage)
+	},
+}

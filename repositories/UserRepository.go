@@ -12,9 +12,23 @@ var users = []models.User{
 		Posts: Posts,
 		Followers: []models.Follower{
 			{
-				UserId: 1,
+				UserId: 2,
 			},
 		},
+	},
+	{
+		Id:        2,
+		Name:      "Opemipo",
+		Email:     "Opemipo@mail.com",
+		Posts:     []models.Post{},
+		Followers: []models.Follower{},
+	},
+	{
+		Id:        3,
+		Name:      "TalOpe",
+		Email:     "T@mail.com",
+		Posts:     []models.Post{},
+		Followers: []models.Follower{},
 	},
 }
 
@@ -34,67 +48,14 @@ func GetUser(id int) (models.User, error) {
 	return user, nil
 }
 
-//
-//import (
-//	"github.com/bezaeel/fynd-twitter/models"
-//)
-//
-//var Posts = []models.Post{
-//	{
-//		Id: "id-0",
-//		UserId: "2",
-//		Message: "Ask Talabi..",
-//	},
-//}
-//
-//var Users = []models.User{
-//	{
-//		Id: "3",
-//		Name: "Rotimi",
-//		Email: "r@mail.co",
-//		Posts: Posts,
-//	},
-//}
-//
-//type UserResponse struct {
-//
-//	response []models.User
-//}
-//
-//
-////all users
-//func AllUsers() *UserResponse{
-//	return &UserResponse{response: Users}
-//}
-//
-////all user's post
-////func GetUserPosts(userId graphql.ID){
-////	for _, user := range Users{
-////		if userId == user.Id{
-////			b, _ := json.Marshal(user.Posts)
-////			fmt.Println(string(b))
-////		}
-////	}
-////}
-//
-////all user's followers
-////func AllUserFollowers(userId graphql.ID) {
-////	for _, user := range Users{
-////		if userId == user.Id{
-////			b, _ := json.Marshal(user.Followers)
-////			fmt.Println(string(b))
-////		}
-////	}
-////}
-//
-////all user's following
-////func GetFollowing(userId graphql.ID) {
-////	for _, user := range Users{
-////		for _, following := range user.Followers{
-////			if userId == following.UserId{
-////				b, _ := json.Marshal(user)
-////				fmt.Println(string(b))
-////			}
-////		}
-////	}
-////}
+func AddFollower(userId int, followerId int) (models.User, error) {
+	user := models.User{}
+	follower := models.Follower{UserId: followerId}
+	for _, record := range users {
+		if int(record.Id) == userId {
+			record.Followers = append(record.Followers, follower)
+			user = record
+		}
+	}
+	return user, nil
+}
