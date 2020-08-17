@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd1a7554-3ac8-4b8a-84c2-c3b664972fb3" name="Default Changelist" comment="Implementation of the queries, mutations, resolvers and repositories&#10;Changed graphql library">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Post.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/Post.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/schema.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/schema.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/PostRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/PostRepository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/UserRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/UserRepository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolvers/PostResolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/resolvers/PostResolver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolvers/UserResolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/resolvers/UserResolver.go" afterDir="false" />
+    <list default="true" id="dd1a7554-3ac8-4b8a-84c2-c3b664972fb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +93,29 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implementation of the queries, resolvers and repositories&#10;Changed graphql library" />
     <MESSAGE value="Implementation of the queries, mutations, resolvers and repositories&#10;Changed graphql library" />
@@ -113,10 +141,10 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2183" y="231" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1596943052188" />
-    <state x="2441" y="93" key="CommitChangelistDialog2" timestamp="1597622234326">
+    <state x="2441" y="93" key="CommitChangelistDialog2" timestamp="1597622340080">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2441" y="93" key="CommitChangelistDialog2/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597622234326" />
+    <state x="2441" y="93" key="CommitChangelistDialog2/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597622340080" />
     <state width="728" height="466" key="DebuggerActiveHint" timestamp="1597621904358">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
@@ -153,6 +181,10 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597621927824" />
+    <state x="2472" y="257" key="Vcs.Push.Dialog.v2" timestamp="1597622735882">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2472" y="257" key="Vcs.Push.Dialog.v2/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1597622735882" />
     <state x="93" y="93" width="1095" height="504" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596953402499">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
